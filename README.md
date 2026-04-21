@@ -1,7 +1,15 @@
 # Platform Engineering Portfolio
 
-k3d ローカル環境から始め、GitOps・Observability・Policy・DR まで、  
-Platform Engineering の主要領域を一貫したストーリーで構築したポートフォリオです。  
+## About
+
+私はITコンサルとして約5年、オンプレKubernetesクラスタの構築・運用支援に携わっています。
+現場では構築フェーズから参画しており、設計への関与もありますが、
+二次請け・運用支援という立場上、経歴だけではオペレーション寄りに見えることが多いため、
+「設計から一貫して構築できる」ことを示す目的でこのポートフォリオを作りました。
+
+現場に導入されていない仕組み（mise / Terraform / Secret管理 / CNPG / Tempo など）については、
+改善提案に向けた検証も兼ねています。
+
 現在 **Phase 10 の途中**。次タスク：DR演習とRTO実測
 
 ---
@@ -89,7 +97,7 @@ flowchart LR
 | **1** | k3d Cluster IaC | `cluster.yaml` によるクラスタ構成の宣言化。1コマンドで作成・破棄・再作成 |
 | **2** | GitOps & Secrets | ArgoCD による Git = クラスタ状態の実現。ESO で Secret をコードから分離 |
 | **3** | Connectivity | ingress-nginx + cert-manager。`*.localhost` で即 HTTPS 公開できる基盤 |
-| **4** | Observability | LGTM スタック（Loki / Grafana / Tempo / Mimir）でメトリクス・ログ・トレースを統合 |
+| **4** | Observability | LGTM スタック（Loki / Grafana / Tempo）でメトリクス・ログ・トレースを統合 |
 | **5** | Platform Abstraction | Helm Library Chart で K8s マニフェストを抽象化。開発者は `values.yaml` だけ書けばよい |
 | **6** | Golden Path (CI/CD) | push → イメージビルド → GitOps PR → ArgoCD 自動同期までを完全自動化 |
 | **7** | Guardrail (Kyverno) | ポリシーエンジンで `latest` タグ禁止・リソース制限必須などをデプロイ前に強制 |
@@ -128,7 +136,7 @@ flowchart LR
 
 ## ローカル環境
 
-WSL2（Ubuntu 24.04）+ Windows 11 Pro / i9 14900HX / 32GB RAM
+WSL2（Ubuntu 24.04）+ Windows 11 Pro
 
 | ツール | バージョン |
 |---|---|
