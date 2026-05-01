@@ -24,7 +24,7 @@
 | [sample-backend](https://github.com/okccl/sample-backend) | FastAPI + PostgreSQL によるサンプル API（Golden Path の利用例） |
 | [sample-frontend](https://github.com/okccl/sample-frontend) | React + Vite によるサンプル SPA（Golden Path の利用例） |
 |---|---|
-| [platform-adr](https://github.com/okccl/platform-adr) | ADR ポートフォリオ全体における技術選定の意思決定の記録 |
+| [platform-docs](https://github.com/okccl/platform-docs) | 関連ドキュメント ADRや作業手順書など |
 
 ## CI/CD フロー図
 
