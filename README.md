@@ -18,14 +18,14 @@
 
 | リポジトリ | 役割 |
 |---|---|
-| [platform-infra](https://github.com/ccl-labs/platform-infra) | k3d クラスタ IaC・ツール管理（mise）・Terraform（EKS） |
-| [platform-gitops](https://github.com/ccl-labs/platform-gitops) | ArgoCD による GitOps 管理・プラットフォームコンポーネント（ミドルウェア）の宣言 |
-| [apps-gitops](https://github.com/ccl-labs/apps-gitops) | アプリケーション GitOps マニフェスト（Backstage Scaffolder による自動生成・管理） |
-| [platform-charts](https://github.com/ccl-labs/platform-charts) | Helm Library Chart（`common-app` / `common-db`）による抽象化層 |
-| [sample-backend](https://github.com/ccl-labs/sample-backend) | FastAPI + PostgreSQL によるサンプル API（Golden Path の利用例） |
-| [sample-frontend](https://github.com/ccl-labs/sample-frontend) | React + Vite によるサンプル SPA（Golden Path の利用例） |
+| [platform-infra](https://github.com/okccl/platform-infra) | k3d クラスタ IaC・ツール管理（mise）・Terraform（EKS） |
+| [platform-gitops](https://github.com/okccl/platform-gitops) | ArgoCD による GitOps 管理・プラットフォームコンポーネント（ミドルウェア）の宣言 |
+| [apps-gitops](https://github.com/okccl/apps-gitops) | アプリケーション GitOps マニフェスト（Backstage Scaffolder による自動生成・管理） |
+| [platform-charts](https://github.com/okccl/platform-charts) | Helm Library Chart（`common-app` / `common-db`）による抽象化層 |
+| [sample-backend](https://github.com/okccl/sample-backend) | FastAPI + PostgreSQL によるサンプル API（Golden Path の利用例） |
+| [sample-frontend](https://github.com/okccl/sample-frontend) | React + Vite によるサンプル SPA（Golden Path の利用例） |
 |---|---|
-| [platform-docs](https://github.com/ccl-labs/platform-docs) | 関連ドキュメント ADRや作業手順書など |
+| [platform-docs](https://github.com/okccl/platform-docs) | 関連ドキュメント ADRや作業手順書など |
 
 ## CI/CD フロー図
 
