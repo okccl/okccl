@@ -18,12 +18,14 @@
 
 | リポジトリ | 役割 |
 |---|---|
-| [platform-infra](https://github.com/okccl/platform-infra) | k3d クラスタ IaC・ツール管理（mise）・Terraform（EKS） |
+| [platform-infra](https://github.com/okccl/platform-infra) | k3d クラスタ IaC・ツール管理（aqua）・Terraform（EKS） |
 | [platform-gitops](https://github.com/okccl/platform-gitops) | ArgoCD による GitOps 管理・プラットフォームコンポーネント（ミドルウェア）の宣言 |
 | [apps-gitops](https://github.com/okccl/apps-gitops) | アプリケーション GitOps マニフェスト（Backstage Scaffolder による自動生成・管理） |
 | [platform-charts](https://github.com/okccl/platform-charts) | Helm Library Chart（`common-app` / `common-db`）による抽象化層 |
 | [sample-backend](https://github.com/okccl/sample-backend) | FastAPI + PostgreSQL によるサンプル API（Golden Path の利用例） |
 | [sample-frontend](https://github.com/okccl/sample-frontend) | React + Vite によるサンプル SPA（Golden Path の利用例） |
+|---|---|
+| [backstage](https://github.com/okccl/backstage) | Backstage カスタムイメージのソース |
 |---|---|
 | [platform-docs](https://github.com/okccl/platform-docs) | 関連ドキュメント ADRや作業手順書など |
 
@@ -177,7 +179,7 @@ flowchart TD
 ## 技術スタック
 
 **Infrastructure / Cluster**
-- k3d / kubectl / Helm v3 / mise / direnv
+- k3d / kubectl / Helm v3 / aqua / direnv
 - Terraform（EKS） / Crossplane（provider-helm / provider-aws / provider-gcp）
 - Cilium（eBPF CNI）/ vCluster
 
@@ -235,4 +237,4 @@ flowchart TD
 
 **ローカル**：WSL2（Ubuntu 24.04）+ Windows 11 Pro / i9 14900HX / 32GB RAM  
 **クラウド**：AWS（EKS） / GCP（GKE）  
-ツールバージョンは各リポジトリの `.mise.toml` を参照。
+ツールバージョンは各リポジトリの `aqua.yaml` を参照。
