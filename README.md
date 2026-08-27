@@ -21,15 +21,13 @@ AIによる生成物の品質をどう担保するかという点も、あわせ
 
 | リポジトリ | 役割 |
 |---|---|
-| [platform-infra](https://github.com/okccl/platform-infra) | k3d クラスタ IaC・ツール管理（aqua）・Terraform（EKS） |
+| [platform-infra](https://github.com/okccl/platform-infra) | k3d クラスタ IaC・ツール管理（aqua） |
 | [platform-gitops](https://github.com/okccl/platform-gitops) | ArgoCD による GitOps 管理・プラットフォームコンポーネント（ミドルウェア）の宣言 |
 | [apps-gitops](https://github.com/okccl/apps-gitops) | アプリケーション GitOps マニフェスト（Backstage Scaffolder による自動生成・管理） |
 | [platform-charts](https://github.com/okccl/platform-charts) | Helm Library Chart（`common-app` / `common-db`）による抽象化層 |
 | [sample-backend](https://github.com/okccl/sample-backend) | FastAPI + PostgreSQL によるサンプル API（Golden Path の利用例） |
 | [sample-frontend](https://github.com/okccl/sample-frontend) | React + Vite によるサンプル SPA（Golden Path の利用例） |
-|---|---|
 | [backstage](https://github.com/okccl/backstage) | Backstage カスタムイメージのソース |
-|---|---|
 | [platform-docs](https://github.com/okccl/platform-docs) | 関連ドキュメント ADRや作業手順書など |
 
 ## CI/CD フロー図
