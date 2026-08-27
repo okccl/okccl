@@ -2,13 +2,16 @@
 
 ## About
 
-私はITコンサルとして約5年、オンプレKubernetesクラスタの構築・運用支援に携わっています。
+私はITコンサルとして4年強、オンプレKubernetesクラスタの構築・運用支援に携わっています。
 現場では構築フェーズから参画しており、設計への関与もありますが、
 運用支援という立場だとオペレーション寄りに見えるため、
 「設計から一貫して構築できる」ことを示す目的でこのポートフォリオを作りました。
 
 現場に導入されていない仕組み（aqua / Terraform / Secret管理 / CNPG / Tempo など）については、
 改善提案に向けた検証も兼ねています。
+
+構築はAI Agentの活用を前提としたプロセスで進めており、
+AIによる生成物の品質をどう担保するかという点も、あわせて検証対象としています。
 
 現在 **Phase 12 まで完了**。
 
@@ -180,22 +183,27 @@ flowchart TD
 
 **Infrastructure / Cluster**
 - k3d / kubectl / Helm v3 / aqua / direnv
-- Terraform（EKS） / Crossplane（provider-helm / provider-aws / provider-gcp）
 - Cilium（eBPF CNI）/ vCluster
+- 未着手
+  - Terraform（EKS） / Crossplane（provider-helm / provider-aws / provider-gcp）
 
 **GitOps / Secrets**
 - ArgoCD v3 / ArgoCD ApplicationSets / External Secrets Operator / SOPS × Age
-- AWS Secrets Manager / GCP Secret Manager（ESO 経由）
+- 未着手
+  - AWS Secrets Manager / GCP Secret Manager（ESO 経由）
 
 **Observability**
 - kube-prometheus-stack（Prometheus v3 / Grafana）/ Loki / Grafana Alloy / Tempo
 - OpenTelemetry（アプリ側トレーシング）
-- Amazon Managed Prometheus / Google Managed Prometheus（クラウド比較）
-- OpenCost（コスト可視化）
+- 未着手
+  - Amazon Managed Prometheus / Google Managed Prometheus（クラウド比較）
+  - OpenCost（コスト可視化）
 
 **Networking**
 - ingress-nginx / cert-manager
-- Gateway API / Envoy Gateway（ローカル）/ AWS LBC / GKE Gateway Controller（クラウド）
+- Gateway API / Envoy Gateway（ローカル）
+- 未着手
+  - AWS LBC / GKE Gateway Controller（クラウド）
 
 **Policy / Security**
 - Kyverno（Validate / Mutate ポリシー）
@@ -204,7 +212,8 @@ flowchart TD
 **Identity / Access**
 - Keycloak（SSO / OIDC IdP）
 - Kubernetes RBAC / ArgoCD RBAC
-- IRSA（AWS）/ Workload Identity（GCP）
+- 未着手
+  - IRSA（AWS）/ Workload Identity（GCP）
 
 **IDP / Developer Experience**
 - Backstage（サービスカタログ / Software Templates）
@@ -215,11 +224,13 @@ flowchart TD
 **Autoscaling**
 - VPA / Goldilocks / HPA
 - KEDA（イベント駆動オートスケール）
-- Karpenter（ノードオートスケール / AWS）/ GKE Autopilot（GCP）
+- 未着手
+  - Karpenter（ノードオートスケール / AWS）/ GKE Autopilot（GCP）
 
 **Data**
 - CloudNativePG（CNPG）/ PostgreSQL 17 / MinIO（クラスタ外）
-- RDS（AWS）/ Cloud SQL（GCP）（マネージド比較）
+- 未着手
+  - RDS（AWS）/ Cloud SQL（GCP）（マネージド比較）
 
 **Resilience**
 - Chaos Engineering（`kubectl drain`）/ Anti-Affinity
@@ -228,8 +239,9 @@ flowchart TD
 - FastAPI / Python 3.12 / React + Vite / nginx / Docker / GHCR
 
 **Cloud**
-- AWS（EKS / RDS / Secrets Manager / ACM / ALB）
-- GCP（GKE / Cloud SQL / Secret Manager / Cloud DNS）
+- 未着手
+  - AWS（EKS / RDS / Secrets Manager / ACM / ALB）
+  - GCP（GKE / Cloud SQL / Secret Manager / Cloud DNS）
 
 ---
 
